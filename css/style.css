@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Spiny Lobster';
+    src: url('font/spiny_lobster/Spiny Lobster DEMO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spiny Lobster', cursive !important; 
+}
+body {
+    overflow-x: hidden;
+    margin: 0 !important;
+}
+.seccion1{
+    background: linear-gradient(rgb(37, 106, 255),aqua);
+    position: relative;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.menu{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: #0050b865;
+}
+.menu-proyectosDestacados{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: #0085aa;
+}
+
+
+/* Dispositivos pequeños*/
+@media (max-width: 576px) {
+    .fotoPortada {
+        width: 100%;
+    }
+
+    .portafolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        border-radius: 50px;
+    }
+}
+
+/* Dispositivos medianos*/
+@media (min-width: 576px) and (max-width: 768px) {
+    .fotoPortada {
+        width: 80%;
+    }
+}
+
+/* Dispositivos grandes*/
+@media (min-width: 768px) and (max-width: 992px) {
+    .fotoPortada {
+        width: 30%;
+    }
+    .portafolio{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 120px;
+        margin-top: 50px;
+        border-radius: 50px;
+    }
+}
+
+/* Dispositivos extragrandes*/
+@media (min-width: 992px) {
+    .fotoPortada {
+        width: 30%;
+    }
+    .portafolio{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 120px;
+        margin-top: 50px;
+        border-radius: 50px;
+    }
+}
+
+
+/* Animaciones */
+
+.animate-left {
+    animation: slideFromLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.animate-right {
+    animation: slideFromRight 1s ease-out forwards;
+    opacity: 0; 
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0; 
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+.animate-appear {
+    animation: appearAnimation 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes appearAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.card-testimonio {
+    padding: 10%;
+    border-radius: 30px;
+    height: 400px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+.seccion3{
+    background: rgb(0, 4, 26);
+    color: rgb(255, 255, 255);
+}
+.seccion2{
+    padding-top: 2%;
+
+}
+.titulo-portafolio{
+    margin-bottom: 70px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.card-portafolio{
+    width: 70%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+
+}
+.btn-portafolio{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.seccion5{
+    background: linear-gradient(8deg, #0098fd 50%, #72f5ee 0%);
+}
+.titulo-contacto{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* Cambiar el color del texto de la barra de navegación */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255); /* Cambia este valor al color que desees */
+}
+
+/* Cambiar el color del texto cuando se le da hover */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #07c9ff; /* Cambia este valor al color que desees */
+}
+
+/* Cambiar el color del texto cuando se encuentra activo */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #05f7ff; /* Cambia este valor al color que desees */
+}
